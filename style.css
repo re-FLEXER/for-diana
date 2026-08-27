@@ -1,0 +1,93 @@
+      * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Виправлено: background замість background-color */
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            color: #ff3366;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-container {
+            position: relative;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+            width: 100%;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        /* Виправлено: Кнопка «Так» початково прихована */
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: #fff;
+            display: none; 
+        }
+
+        #yesBtn:hover {
+            background-color: #e63956;
+            transform: scale(1.1);
+        }
+
+        #noBtn {
+            background-color: #ffffff;
+            color: #333;
+            position: fixed; /* Виправлено: fixed для точного позиціонування у вікні */
+            transition: top 0.15s ease, left 0.15s ease;
+            z-index: 10;
+        }
+
+        .counter-text {
+            margin-top: 25px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Анімація фінального екрану */
+        .success-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
